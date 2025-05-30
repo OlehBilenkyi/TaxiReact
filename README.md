@@ -28,45 +28,97 @@
 ---
 
 ## 📁 Структура проекта
+```
+graph TD
+    A(["🚖 TaxiReact (Vite + React)"]):::root
+    A --- B["⚙️ Configuration"]:::config
+    A --- C["📦 Core"]:::core
+    A --- D["🌐 Pages"]:::pages
+    A --- E["🧩 Components"]:::components
+    A --- F["🎨 Styling"]:::styles
+    A --- G["🛠️ Utilities"]:::utils
 
-<details>
-<summary>Открыть структуру</summary>
+    %% === Configuration ===
+    B --> B1["📄 vite.config.js"]:::build
+    B --> B2["📄 package.json"]:::build
+    B --> B3["📄 .env"]:::security
+    B --> B4["📄 .gitignore"]:::git
 
-TaxiReact/
-├── public/
-├── src/
-│ ├── App.jsx
-│ ├── main.jsx
-│ ├── App.css / index.css
-│ ├── styles/ # Глобальные переменные
-│ │ └── variables.css
-│ ├── Pages/ # Страницы маршрутов
-│ │ ├── HomePage/
-│ │ ├── NewsReviews/
-│ │ ├── Vehicle/
-│ │ └── Videos/
-│ ├── components/
-│ │ ├── HomePage/
-│ │ │ ├── Hero/
-│ │ │ ├── Advantages/
-│ │ │ │ ├── AdvantagesBox/
-│ │ │ │ └── AdvantagesH2/
-│ │ ├── Layout/
-│ │ │ ├── Header/
-│ │ │ └── Footer/
-│ │ ├── NewsReviewsSection/
-│ │ ├── VehicleFleet/
-│ │ └── VideosOnYouTube/
-├── vite.config.js
-├── package.json
-└── README.md
+    %% === Core ===
+    C --> C1["📄 main.jsx"]:::entry
+    C --> C2["📄 App.jsx"]:::entry
+    C --> C3["🔌 API Services"]:::api
+    C3 --> C31["📄 api.js"]:::api
+    C3 --> C32["📄 auth.js"]:::auth
 
-yaml
-Копировать
-Редактировать
+    %% === Pages ===
+    D --> D1["🏠 HomePage"]:::page
+    D1 --> D11["Hero Section"]:::component
+    D1 --> D12["Advantages"]:::component
+    
+    D --> D2["📰 NewsReviews"]:::page
+    D2 --> D21["News List"]:::component
+    D2 --> D22["Review Form"]:::component
+    
+    D --> D3["🚗 VehicleFleet"]:::page
+    D3 --> D31["Car Gallery"]:::component
+    D3 --> D32["Booking Form"]:::component
+    
+    D --> D4["🎥 Videos"]:::page
+    D4 --> D41["Video Player"]:::component
+    D4 --> D42["Playlist"]:::component
 
-</details>
+    %% === Components ===
+    E --> E1["🧭 Layout"]:::layout
+    E1 --> E11["📄 Header.jsx"]:::ui
+    E1 --> E12["📄 Footer.jsx"]:::ui
+    
+    E --> E2["🔄 Reusables"]:::ui
+    E2 --> E21["📄 Button.jsx"]:::ui
+    E2 --> E22["📄 Modal.jsx"]:::ui
+    E2 --> E23["📄 FormInput.jsx"]:::ui
 
+    %% === Styling ===
+    F --> F1["🎨 Global Styles"]:::css
+    F1 --> F11["📄 variables.scss"]:::sass
+    F1 --> F12["📄 reset.scss"]:::sass
+    
+    F --> F2["🧩 Component Styles"]:::css
+    F2 --> F21["📄 Header.module.scss"]:::module
+    F2 --> F22["📄 Button.module.scss"]:::module
+
+    %% === Utilities ===
+    G --> G1["🛠️ Hooks"]:::hooks
+    G1 --> G11["📄 useAuth.js"]:::auth
+    G1 --> G12["📄 useApi.js"]:::api
+    
+    G --> G2["🔧 Helpers"]:::helpers
+    G2 --> G21["📄 formatter.js"]:::utils
+    G2 --> G22["📄 validation.js"]:::utils
+
+    classDef root fill:#f0f0f0,stroke:#333,stroke-width:3px
+    classDef config fill:#e6f3ff,stroke:#4a90e2
+    classDef core fill:#e1f5fe,stroke:#03a9f4
+    classDef pages fill:#e8f5e9,stroke:#4caf50
+    classDef components fill:#fff3e0,stroke:#ffa726
+    classDef styles fill:#f3e5f5,stroke:#9c27b0
+    classDef utils fill:#eceff1,stroke:#607d8b
+    classDef build fill:#dcedc8,stroke:#8bc34a
+    classDef security fill:#ffebee,stroke:#ff4444
+    classDef git fill:#f5f5f5,stroke:#9e9e9e
+    classDef entry fill:#e3f2fd,stroke:#2196f3
+    classDef api fill:#e8eaf6,stroke:#3f51b5
+    classDef auth fill:#fce4ec,stroke:#e91e63
+    classDef page fill:#b3e5fc,stroke:#0288d1
+    classDef component fill:#ffecb3,stroke:#ffa000
+    classDef layout fill:#d7ccc8,stroke:#795548
+    classDef ui fill:#c8e6c9,stroke:#66bb6a
+    classDef css fill:#f8bbd0,stroke:#e91e63
+    classDef sass fill:#f48fb1,stroke:#d81b60
+    classDef module fill:#ffcdd2,stroke:#e53935
+    classDef hooks fill:#b2ebf2,stroke:#00bcd4
+    classDef helpers fill:#cfd8dc,stroke:#78909c
+```
 ---
 
 ## 🧩 Страницы и компоненты
