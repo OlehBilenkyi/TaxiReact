@@ -1,125 +1,112 @@
-
 # 🚖 TaxiReact
 
-**TaxiReact** — это одностраничное приложение (SPA) для службы такси, разработанное с использованием React и Vite. Проект демонстрирует современную архитектуру компонентов, модульную структуру и использование современных инструментов разработки.
+**TaxiReact** — это одностраничное приложение (SPA) для службы такси, разработанное с использованием **React + Vite**.  
+Проект представляет собой **рефакторинг** [предыдущей PHP-версии с MySQL и Telegram API](https://github.com/OlehBilenkyi/Taxi), с акцентом на современный фронтенд, модульную структуру и лучшие практики React-разработки.
+
+> 🛠️ **Старый проект**: [Taxi (PHP)](https://github.com/OlehBilenkyi/Taxi)
+
+---
+
+## 👥 Соавторы
+
+- 👨‍💻 Основной разработчик: [Oleh Bilenkyi](https://github.com/OlehBilenkyi)
+- 🤝 Идея и поддержка: Друг (можно указать GitHub, если есть)
+
+---
+
+## 🚀 Технологии и стек
+
+| Инструмент | Назначение |
+|-----------|------------|
+| ![React](https://img.shields.io/badge/-React-20232a?style=flat&logo=react) | Фреймворк для построения UI |
+| ![Vite](https://img.shields.io/badge/-Vite-646CFF?style=flat&logo=vite&logoColor=white) | Быстрый инструмент сборки |
+| ![SASS](https://img.shields.io/badge/-SASS-cc6699?style=flat&logo=sass&logoColor=white) | Стилизация и модульные CSS |
+| ![ESLint](https://img.shields.io/badge/-ESLint-4B32C3?style=flat&logo=eslint&logoColor=white) | Анализатор кода |
+| ![JavaScript](https://img.shields.io/badge/-JavaScript-f7df1e?style=flat&logo=javascript&logoColor=black) | Язык логики |
+| ![Git](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=white) | Контроль версий |
 
 ---
 
 ## 📁 Структура проекта
 
-```
+<details>
+<summary>Открыть структуру</summary>
+
 TaxiReact/
-├── .gitignore
-├── eslint.config.js
-├── index.html
-├── package-lock.json
-├── package.json
-├── README.md
+├── public/
 ├── src/
-│   ├── App.css
-│   ├── App.jsx
-│   ├── components/
-│   │   ├── HomePage/
-│   │   │   ├── Advantages/
-│   │   │   │   ├── Advantages.css
-│   │   │   │   ├── Advantages.jsx
-│   │   │   │   ├── AdvantagesBox/
-│   │   │   │   │   └── AdvantagesBox.jsx
-│   │   │   │   └── AdvantagesH2/
-│   │   │   │       └── AdvantagesH2.jsx
-│   │   │   └── Hero/
-│   │   │       ├── Hero.css
-│   │   │       └── Hero.jsx
-│   │   ├── Layout/
-│   │   │   ├── Footer/
-│   │   │   │   ├── Footer.jsx
-│   │   │   │   └── Footer.module.sass
-│   │   │   ├── Header/
-│   │   │   │   ├── Header.jsx
-│   │   │   │   └── Header.module.sass
-│   │   │   └── index.js
-│   │   ├── NewsReviewsSection/
-│   │   │   ├── NewsReviewsSection.jsx
-│   │   │   └── NewsReviewsSection.module.sass
-│   │   ├── VehicleFleet/
-│   │   │   ├── VehicleFleet.jsx
-│   │   │   └── VehicleFleet.module.sass
-│   │   └── VideosOnYouTube/
-│   │       ├── VideosOnYouTube.jsx
-│   │       └── VideosOnYouTube.module.sass
-│   ├── index.css
-│   ├── main.jsx
-│   ├── Pages/
-│   │   ├── HomePage/
-│   │   │   └── HomePage.jsx
-│   │   ├── NewsReviews/
-│   │   │   └── NewsReviews.jsx
-│   │   ├── Vehicle/
-│   │   │   └── Vehicle.jsx
-│   │   └── Videos/
-│   │       └── Videos.jsx
-│   └── styles/
-│       └── variables.css
-└── vite.config.js
-```
+│ ├── App.jsx
+│ ├── main.jsx
+│ ├── App.css / index.css
+│ ├── styles/ # Глобальные переменные
+│ │ └── variables.css
+│ ├── Pages/ # Страницы маршрутов
+│ │ ├── HomePage/
+│ │ ├── NewsReviews/
+│ │ ├── Vehicle/
+│ │ └── Videos/
+│ ├── components/
+│ │ ├── HomePage/
+│ │ │ ├── Hero/
+│ │ │ ├── Advantages/
+│ │ │ │ ├── AdvantagesBox/
+│ │ │ │ └── AdvantagesH2/
+│ │ ├── Layout/
+│ │ │ ├── Header/
+│ │ │ └── Footer/
+│ │ ├── NewsReviewsSection/
+│ │ ├── VehicleFleet/
+│ │ └── VideosOnYouTube/
+├── vite.config.js
+├── package.json
+└── README.md
+
+yaml
+Копировать
+Редактировать
+
+</details>
+
 ---
-```
-🚀 Технологии и инструменты
-React — библиотека для построения пользовательских интерфейсов.
 
-Vite — быстрый инструмент сборки и разработки.
+## 🧩 Страницы и компоненты
 
-ESLint — анализатор кода для обеспечения качества.
+- **HomePage** — главная страница:
+  - `Hero` — баннер с призывом
+  - `Advantages` — преимущества службы
+  - `NewsReviews` — отзывы и публикации
+  - `VehicleFleet` — автопарк
+  - `VideosOnYouTube` — видеоконтент
 
-SASS (SCSS) — препроцессор CSS для более удобной стилизации.
+---
 
-Модульная структура компонентов — для лучшей организации и повторного использования кода.
-```
-```
-📦 Установка и запуск
-Клонируй репозиторий:
+## 📦 Установка и запуск
 
+```bash
+# 1. Клонировать репозиторий
 git clone https://github.com/OlehBilenkyi/TaxiReact.git
 cd TaxiReact
 
-Установи зависимости:
+# 2. Установить зависимости
 npm install
 
-Запусти приложение в режиме разработки:
+# 3. Запустить в режиме разработки
 npm run dev
 
-Собери проект для продакшена:
+# 4. Собрать проект для продакшена
 npm run build
-```
----
-```
+🔗 Старый проект (архив)
+Если интересно, с чего всё начиналось — посмотри первую версию проекта на PHP:
 
-🧩 Страницы и компоненты
-HomePage — главная страница с секциями:
+📂 Taxi (Legacy PHP) — https://github.com/OlehBilenkyi/Taxi
 
-Hero — приветственный баннер.
-
-Advantages — преимущества службы такси.
-
-NewsReviews — новости и отзывы клиентов.
-
-Vehicle — информация о парке автомобилей.
-
-Videos — видеоматериалы на YouTube.
-```
----
-```
 📬 Контакты
-Если у тебя есть вопросы или предложения, не стесняйся связаться со мной:
+Если у тебя есть вопросы или предложения — пиши:
 
-GitHub: OlehBilenkyi
+GitHub: @OlehBilenkyi
 
-Email: твой_email@example.com
-```
-```
+Email: I3eLuy@gmail.com
+
 📄 Лицензия
-Этот проект распространяется под лицензией MIT. Подробнее смотри в файле LICENSE.
-```
-
-
+Этот проект распространяется под лицензией MIT. Подробнее смотри в LICENSE.
 
