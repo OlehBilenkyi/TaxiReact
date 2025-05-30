@@ -28,7 +28,7 @@
 ---
 
 ## 📁 Структура проекта
-```
+```mermaid
 graph TD
     A(["🚖 TaxiReact (Vite + React)"]):::root
     A --- B["⚙️ Configuration"]:::config
