@@ -1,3 +1,4 @@
+```
 TaxiReact/
 ├── .gitignore
 ├── eslint.config.js
@@ -51,3 +52,4 @@ TaxiReact/
 │   └── styles/
 │       └── variables.css
 └── vite.config.js
+```
