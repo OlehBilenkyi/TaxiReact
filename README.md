@@ -10,7 +10,7 @@
 ## 👥 Соавторы
 
 - 👨‍💻 Основной разработчик: [Oleh Bilenkyi](https://github.com/OlehBilenkyi)
-- 🤝 Идея и поддержка: Друг (можно указать GitHub, если есть)
+- 🤝 Идея и поддержка: Друг [Serhiy7](https://github.com/Serhiy7)
 
 ---
 
